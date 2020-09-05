@@ -8,5 +8,7 @@ exports.max = function max (array) {
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if (!array || array.length === 0) return 0;
+    let sum = array.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+    return sum / array.length;
 }
